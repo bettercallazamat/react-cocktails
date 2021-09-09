@@ -1,11 +1,16 @@
-import { FETCH_DATA, SELECT_COCKTAIL } from "../constants/actions";
+import { GET_SUCCESS, GET_FAIL } from "../constants/actions";
 
-const cocktailReducer = (state = [], action) => {
+const initialState = {
+  cocktails: [],
+  error: '',
+};
+
+const cocktailReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_DATA:
-      return action.data;
-    case SELECT_COCKTAIL:
-      return action.cocktail;
+    case GET_SUCCESS:
+      return { ...state, cocktails: action.payload };
+    case GET_FAIL:
+      return { ...state, error: action.error };
     default:
       return state;
   }
