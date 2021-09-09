@@ -1,0 +1,4 @@
+export const FETCH_DATA = 'FETCH_DATA';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const SELECT_COCKTAIL = 'SELECT_COCKTAIL';
+

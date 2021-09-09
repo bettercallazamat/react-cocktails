@@ -1,10 +1,10 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const Cocktail = () => (
+const CocktailCard = ({cocktail}) => (
   <div className="Cocktail">
-    cocktail
+    <p>{cocktail.strDrink}</p>
   </div>
 );
 
-export default Cocktail;
+export default CocktailCard;
