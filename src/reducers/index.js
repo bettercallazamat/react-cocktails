@@ -3,8 +3,8 @@ import filterReducer from './filter';
 import cocktailReducer from './cocktails';
 
 const rootReducer = combineReducers({
-  filterReducer,
-  cocktailReducer,
+  data: cocktailReducer,
+  filter: filterReducer,
 });
 
 export default rootReducer;

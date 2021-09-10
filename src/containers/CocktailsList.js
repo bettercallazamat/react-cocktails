@@ -1,12 +1,17 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import CocktailCard from '../components/CocktailCard';
 
-const CocktailsList = () => {
+const CocktailsList = ({ cocktails }) => {
   // const foo = 'bar';
 
   return (
     <div className="CocktailsList">
-      CocktailsList
+      { 
+        cocktails.map((cocktail, key) => 
+          <CocktailCard cocktail={cocktail} key={key} />
+        )
+      }
     </div>
   );
 };
