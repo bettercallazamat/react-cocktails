@@ -1,30 +1,25 @@
 import React from 'react';
+import ingridientsHelper from '../helpers/ingridientsHelper';
 import '../assets/styles/CocktailDetails.css';
 // import PropTypes from 'prop-types';
 
 const CocktailDetails = (cocktailData) => {
   const cocktail = cocktailData.cocktail;
 
-  let ingridients = [];
-  const keys = Object.keys(cocktail);
-  keys.forEach((key, index) => {
-    if (key.includes('strIngredient') && cocktail[key]){
-      ingridients.push(cocktail[key]);
-    }
-  });
+  let ingridients = ingridientsHelper(cocktail);
 
   return (
     <div className="CocktailDetails">
       <img src={cocktail.strDrinkThumb} alt="drink" />
-      <p>{ cocktail.strCategory }</p>
-      <p>{ cocktail.strIBA }</p>
-      <p>{ cocktail.strAlcoholic }</p>
-      <p>{ cocktail.strGlass }</p>
-      <p>{ cocktail.strInstructions }</p>
-      <p>{ cocktail.strIngredient1 }</p>
+      <h3><strong>Name: </strong>{ cocktail.strDrink }</h3>
+      <p><strong>Category: </strong>{ cocktail.strCategory }</p>
+      <p><strong>IBA: </strong>{ cocktail.strIBA }</p>
+      <p><strong>Alcoholic: </strong>{ cocktail.strAlcoholic }</p>
+      <p><strong>Glass: </strong>{ cocktail.strGlass }</p>
+      <p><strong>Instructions: </strong>{ cocktail.strInstructions }</p>
       <ul className="ingridients">
-        {ingridients.map(ingridient => 
-          <li className="ingridient" key={ingridient}>{ingridient}</li>
+        {Object.keys(ingridients).map((key, index) => 
+          <li key={index}><strong>{key}</strong>: {ingridients[key]}</li>
         )}
       </ul>
     </div>
