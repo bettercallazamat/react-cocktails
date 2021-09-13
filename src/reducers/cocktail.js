@@ -1,19 +1,20 @@
-import { GET_SUCCESS, GET_FAIL, GET_IN_PROGRESS } from "../constants/actions";
+import { GET_COCKTAIL_SUCCESS, GET_COCKTAIL_FAIL, GET_COCKTAIL_IN_PROGRESS } from "../constants/actions";
 
 const initialState = {
   cocktail: {},
   error: '',
   loading: true,
+  notFound: false,
 };
 
 const cocktailReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_IN_PROGRESS:
+    case GET_COCKTAIL_IN_PROGRESS:
       return { ...state, loading: true };
-    case GET_SUCCESS:
+    case GET_COCKTAIL_SUCCESS:
       return { ...state, cocktail: action.payload, loading: false };
-    case GET_FAIL:
-      return { ...state, error: action.error, loading: false };
+    case GET_COCKTAIL_FAIL:
+      return { ...state, error: action.error, loading: false, notFound: true };
     default:
       return state;
   }
