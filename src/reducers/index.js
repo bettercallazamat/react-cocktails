@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import filterReducer from './filter';
-import cocktailReducer from './cocktails';
+import cocktailsReducer from './cocktails';
+import cocktailReducer from './cocktail'
 
 const rootReducer = combineReducers({
-  data: cocktailReducer,
+  cocktails: cocktailsReducer,
+  cocktail: cocktailReducer,
   filter: filterReducer,
 });
 

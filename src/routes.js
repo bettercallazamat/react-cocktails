@@ -9,7 +9,7 @@ const Routes = () => (
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/Page404" component={Page404} exact />
-      <Route path="/:cocktailName" component={Cocktail} exact />
+      <Route path="/cocktail/:id" component={Cocktail} exact />
       <Redirect to="/Page404" />
     </Switch>
   </BrowserRouter>

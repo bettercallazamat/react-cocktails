@@ -1,13 +1,13 @@
 import { GET_SUCCESS, GET_FAIL, GET_IN_PROGRESS } from "../constants/actions";
 import axios from 'axios';
 
-const getCocktailsAction = (initial = true, name = null, category = null, alchogolic = null) => async dispatch => {
+const getCocktailAction = (id) => async dispatch => {
   try {
     dispatch({
       type: GET_IN_PROGRESS,
     });
 
-    const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
     dispatch({
       type: GET_SUCCESS,
       payload: response.data,
@@ -20,4 +20,4 @@ const getCocktailsAction = (initial = true, name = null, category = null, alchog
   }
 };
 
-export { getCocktailsAction };
+export { getCocktailAction };

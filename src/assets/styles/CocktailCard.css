@@ -1,0 +1,29 @@
+.CocktailCard {
+  position: relative;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.CocktailCard h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.CocktailCard img {
+  width: 100%;
+}
+
+.CocktailCard .coctail-alco, 
+.CocktailCard .coctail-category {
+  display: inline-block;
+  padding: 4px;
+  margin: 0 4px 4px 0;
+  border-radius: 2px;
+  background-color: #8A34D9;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+
