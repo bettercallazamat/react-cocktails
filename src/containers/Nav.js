@@ -8,7 +8,7 @@ const Nav = () => (
     <Link to="/" title="Home Page">
       <img src={logo} alt="logo" />
     </Link>
-    <p>DRINKS & LIFESTYLE</p>
+    <p data-testid="logoText">DRINKS & LIFESTYLE</p>
   </div>
 );
 

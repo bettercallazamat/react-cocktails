@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CocktailCard from '../components/CocktailCard';
 import CategoryFilter from '../components/CategoryFilter';
 import filterAction from '../actions/filters';
@@ -25,10 +26,12 @@ const CocktailsList = ({ cocktails }) => {
         <CategoryFilter selected={filter} filter={handleFilterChange} cocktails={cocktails} />
         <button onClick={resetFilter} type="button">Clear</button>
       </div>
-      <div className="CocktailsList-list">
+      <div className="CocktailsList-list" data-testid="CocktailsList">
         {
           filteredCocktails.map((cocktail) => (
-            <CocktailCard cocktail={cocktail} key={cocktail.idDrink} />
+            <Link to={`/cocktail/${cocktail.idDrink}`} key={cocktail.idDrink}>
+              <CocktailCard cocktail={cocktail} />
+            </Link>
           ))
         }
       </div>
