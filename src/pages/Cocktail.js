@@ -26,7 +26,7 @@ const Cocktail = () => {
 
   return (
     <>
-      <Nav back />
+      <Nav />
       <div>
         {cocktailData(cocktail)}
       </div>

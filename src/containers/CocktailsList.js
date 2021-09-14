@@ -21,7 +21,7 @@ const CocktailsList = ({ cocktails }) => {
 
   return (
     <div className="CocktailsList">
-      <div className="CocktailsList-filter">
+      <div className="CocktailsList-filter flex">
         <CategoryFilter selected={filter} filter={handleFilterChange} cocktails={cocktails} />
         <button onClick={resetFilter} type="button">Clear</button>
       </div>

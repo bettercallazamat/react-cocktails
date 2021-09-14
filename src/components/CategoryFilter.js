@@ -15,8 +15,8 @@ const CategoryFilter = ({ filter, cocktails, selected }) => {
   );
 
   return (
-    <div className="searchWrapper d-flex  justify-content-center">
-      <select value={selected} className="searchBar text-center " onChange={filter}>
+    <div className="CategoryFilter">
+      <select value={selected} onChange={filter}>
         {defaultOption()}
         {options}
       </select>

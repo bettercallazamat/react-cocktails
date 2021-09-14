@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
-} 
-
-body {
-  margin: 20px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
