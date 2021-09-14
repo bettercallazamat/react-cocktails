@@ -17,7 +17,7 @@ const Cocktail = () => {
 
   const cocktailData = (cocktail) => {
     if (cocktail.loading) {
-      return (<span>Loading...</span>);
+      return (<span className="loading-text">Loading...</span>);
     } if (!cocktail.cocktail.drinks) {
       return (<Redirect to="/Page404" />);
     }

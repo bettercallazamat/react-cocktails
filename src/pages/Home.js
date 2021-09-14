@@ -17,7 +17,7 @@ const Home = () => {
       <Nav />
       <div>
         { data.loading
-          ? <span>Loading...</span>
+          ? <span className="loading-text">Loading...</span>
           : <CocktailsList cocktails={data.cocktails.drinks} /> }
       </div>
     </>

@@ -1,4 +1,6 @@
 .CocktailsList-filter {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -16,6 +18,11 @@
 
 .CocktailsList-filter button {
   padding: 0 20px;
+}
+
+.CocktailsList-filter select:hover,
+.CocktailsList-filter button {
+  cursor: pointer;
 }
 
 .CocktailsList-list {
