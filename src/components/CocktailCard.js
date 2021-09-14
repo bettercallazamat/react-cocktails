@@ -18,7 +18,11 @@ const CocktailCard = ({ cocktail }) => (
 );
 
 CocktailCard.propTypes = {
-  cocktail: PropTypes.objectOf.isRequired,
+  cocktail: PropTypes.objectOf(PropTypes.string),
+};
+
+CocktailCard.defaultProps = {
+  cocktail: {},
 };
 
 export default CocktailCard;

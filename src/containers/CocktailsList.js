@@ -27,7 +27,9 @@ const CocktailsList = ({ cocktails }) => {
       </div>
       <div className="CocktailsList-list">
         {
-          filteredCocktails.map((cocktail) => <CocktailCard cocktail={cocktail} key={cocktail} />)
+          filteredCocktails.map((cocktail) => (
+            <CocktailCard cocktail={cocktail} key={cocktail.idDrink} />
+          ))
         }
       </div>
     </div>
@@ -35,7 +37,7 @@ const CocktailsList = ({ cocktails }) => {
 };
 
 CocktailsList.propTypes = {
-  cocktails: PropTypes.objectOf,
+  cocktails: PropTypes.arrayOf(PropTypes.object),
 };
 
 CocktailsList.defaultProps = {

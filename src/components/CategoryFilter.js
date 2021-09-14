@@ -9,7 +9,7 @@ const CategoryFilter = ({ filter, cocktails }) => {
   ));
 
   const defaultOption = () => (
-    <option value="All" key="1" selected>
+    <option value="All" key="1">
       All
     </option>
   );
@@ -26,10 +26,11 @@ const CategoryFilter = ({ filter, cocktails }) => {
 
 CategoryFilter.propTypes = {
   filter: PropTypes.func,
-  cocktails: PropTypes.objectOf.isRequired,
+  cocktails: PropTypes.arrayOf(PropTypes.object),
 };
 
 CategoryFilter.defaultProps = {
+  cocktails: {},
   filter: () => {
   },
 };
