@@ -2,7 +2,7 @@ import Nav from '../containers/Nav';
 
 const Page404 = () => (
   <>
-    <Nav />
+    <Nav back />
     <div>
       404
     </div>
