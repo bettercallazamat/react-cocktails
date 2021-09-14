@@ -1,7 +1,7 @@
 const ingridientsHelper = (cocktail) => {
   const ingridients = [];
   const ingridientsMeasures = [];
-  const ingridientsObj = [];
+  const ingridientsObj = {};
   const keys = Object.keys(cocktail);
   keys.forEach((key) => {
     if (key.includes('strIngredient') && cocktail[key]) {

@@ -7,6 +7,8 @@ const CocktailDetails = (cocktailData) => {
   const { cocktail } = cocktailData;
 
   const ingridients = ingridientsHelper(cocktail);
+  // console.log(cocktail);
+  // console.log(ingridients);
 
   return (
     <div className="CocktailDetails">
