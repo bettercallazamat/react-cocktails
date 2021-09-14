@@ -9,19 +9,27 @@ const Cocktail = () => {
   const cocktail = useSelector(state => state.cocktail);
   const dispatch = useDispatch();
   const { id } = useParams()
+  // const { notFound, setNotFound } = useState(false);
 
   useEffect(() => {
     dispatch(getCocktailAction(id));
   }, [id, dispatch]);
 
+  const cocktailData = (cocktail) => {
+    if (cocktail.loading) {
+      return (<span>Loading...</span>);
+    } else if (!cocktail.cocktail.drinks) {
+      return (<Redirect to="/Page404" />);
+    } else {
+      return (<CocktailDetails cocktail={cocktail.cocktail.drinks[0]} />);
+    }
+  }
+
   return (
     <>
       <Nav />
       <div>
-        {cocktail.notFound && <Redirect to="/Page404" />}
-        {cocktail.loading
-          ? <span>Loading...</span>
-          : <CocktailDetails cocktail={cocktail.cocktail.drinks[0]} />}
+        {cocktailData(cocktail)}
       </div>
     </>
   );

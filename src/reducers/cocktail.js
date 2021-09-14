@@ -2,9 +2,8 @@ import { GET_COCKTAIL_SUCCESS, GET_COCKTAIL_FAIL, GET_COCKTAIL_IN_PROGRESS } fro
 
 const initialState = {
   cocktail: {},
-  error: '',
+  error: null,
   loading: true,
-  notFound: false,
 };
 
 const cocktailReducer = (state = initialState, action) => {
@@ -14,7 +13,7 @@ const cocktailReducer = (state = initialState, action) => {
     case GET_COCKTAIL_SUCCESS:
       return { ...state, cocktail: action.payload, loading: false };
     case GET_COCKTAIL_FAIL:
-      return { ...state, error: action.error, loading: false, notFound: true };
+      return { ...state, error: action.error, loading: false };
     default:
       return state;
   }

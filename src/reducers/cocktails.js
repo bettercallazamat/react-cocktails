@@ -2,7 +2,7 @@ import { GET_COCKTAILS_SUCCESS, GET_COCKTAILS_FAIL, GET_COCKTAILS_IN_PROGRESS } 
 
 const initialState = {
   cocktails: {},
-  error: '',
+  error: null,
   loading: true,
 };
 
