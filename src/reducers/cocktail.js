@@ -1,4 +1,4 @@
-import { GET_COCKTAIL_SUCCESS, GET_COCKTAIL_FAIL, GET_COCKTAIL_IN_PROGRESS } from "../constants/actions";
+import { GET_COCKTAIL_SUCCESS, GET_COCKTAIL_FAIL, GET_COCKTAIL_IN_PROGRESS } from '../constants/actions';
 
 const initialState = {
   cocktail: {},

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import {
+  Route, BrowserRouter, Switch, Redirect,
+} from 'react-router-dom';
 import Home from './pages/Home';
 import Cocktail from './pages/Cocktail';
 import Page404 from './pages/Page404';

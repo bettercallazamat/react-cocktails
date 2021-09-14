@@ -1,7 +1,7 @@
-import { GET_COCKTAILS_SUCCESS, GET_COCKTAILS_FAIL, GET_COCKTAILS_IN_PROGRESS } from "../constants/actions";
 import axios from 'axios';
+import { GET_COCKTAILS_SUCCESS, GET_COCKTAILS_FAIL, GET_COCKTAILS_IN_PROGRESS } from '../constants/actions';
 
-const getCocktailsAction = (initial = true, name = null, category = null, alchogolic = null) => async dispatch => {
+const getCocktailsAction = () => async (dispatch) => {
   try {
     dispatch({
       type: GET_COCKTAILS_IN_PROGRESS,
@@ -20,4 +20,4 @@ const getCocktailsAction = (initial = true, name = null, category = null, alchog
   }
 };
 
-export { getCocktailsAction };
+export default getCocktailsAction;

@@ -1,23 +1,21 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import CocktailCard from '../components/CocktailCard';
 import '../assets/styles/CocktailsList.css';
 
-const CocktailsList = ({ cocktails }) => {
-  return (
-    <div className="CocktailsList">
-      <div className="CocktailsList-filter">
-        
-      </div>
-      <div className="CocktailsList-list">
-        { 
-          cocktails.map((cocktail, key) => 
-            <CocktailCard cocktail={cocktail} key={key} />
-          )
+const CocktailsList = ({ cocktails }) => (
+  <div className="CocktailsList">
+    <div className="CocktailsList-filter" />
+    <div className="CocktailsList-list">
+      {
+        cocktails.map((cocktail) => <CocktailCard cocktail={cocktail} key={cocktail} />)
         }
-      </div>
     </div>
-  );
+  </div>
+);
+
+CocktailsList.propTypes = {
+  cocktails: PropTypes.objectOf.isRequired,
 };
 
 export default CocktailsList;
