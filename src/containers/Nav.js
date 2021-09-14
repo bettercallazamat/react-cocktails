@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/cocktail-logo.png';
+import '../assets/styles/Nav.css';
 
 const Nav = () => (
   <div className="Nav">
-    <Link to="/" title="World Data Home Page">
+    <Link to="/" title="Home Page">
       <img src={logo} alt="logo" />
     </Link>
     <p>DRINKS & LIFESTYLE</p>
