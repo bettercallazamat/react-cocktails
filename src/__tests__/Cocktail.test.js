@@ -29,7 +29,7 @@ const initialState = {
           strMeasure3: '1 oz ',
           strMeasure4: null,
         },
-      ]
+      ],
     },
     error: null,
     loading: false,

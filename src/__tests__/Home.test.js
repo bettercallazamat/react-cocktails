@@ -12,25 +12,25 @@ const initialState = {
   cocktails: {
     cocktails: {
       drinks: [
-      {
-        idDrink: '11007',
-        strDrink: 'Margarita',
-        strCategory: 'Ordinary Drink',
-        strAlcoholic: 'Alcoholic',
-      },
-      {
-        idDrink: '11008',
-        strDrink: 'Boom',
-        strCategory: 'Shot',
-        strAlcoholic: 'Alcoholic',
-      },
-      {
-        idDrink: '11009',
-        strDrink: 'Luck',
-        strCategory: 'Cocktail',
-        strAlcoholic: 'Alcoholic',
-      },
-    ]
+        {
+          idDrink: '11007',
+          strDrink: 'Margarita',
+          strCategory: 'Ordinary Drink',
+          strAlcoholic: 'Alcoholic',
+        },
+        {
+          idDrink: '11008',
+          strDrink: 'Boom',
+          strCategory: 'Shot',
+          strAlcoholic: 'Alcoholic',
+        },
+        {
+          idDrink: '11009',
+          strDrink: 'Luck',
+          strCategory: 'Cocktail',
+          strAlcoholic: 'Alcoholic',
+        },
+      ],
     },
     error: null,
     loading: false,
@@ -57,7 +57,7 @@ describe('Page Home', () => {
   });
 
   it('loads only countries from selected filter', () => {
-    store = mockStore({ ...initialState, filter: 'Margarita'});
+    store = mockStore({ ...initialState, filter: 'Margarita' });
     store.dispatch = jest.fn();
 
     render(

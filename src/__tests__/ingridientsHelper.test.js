@@ -1,4 +1,4 @@
-import ingridientsHelper from "../helpers/ingridientsHelper";
+import ingridientsHelper from '../helpers/ingridientsHelper';
 
 describe('ingridientsHelper', () => {
   const cocktail = {
@@ -20,11 +20,11 @@ describe('ingridientsHelper', () => {
   };
 
   const ingridients = {
-    'Tequila': '1 1/2 oz ',
+    Tequila: '1 1/2 oz ',
     'Triple sec': '1/2 oz ',
     'Lime juice': '1 oz ',
-    'Salt': 'defined in instructions',
-  }
+    Salt: 'defined in instructions',
+  };
 
   it('returns object with key as a ingridient and value as a measure', () => {
     expect(ingridientsHelper(cocktail)).toEqual(ingridients);
@@ -33,4 +33,4 @@ describe('ingridientsHelper', () => {
   it('does not return empty object', () => {
     expect(ingridientsHelper(cocktail)).not.toEqual({});
   });
-})
+});
