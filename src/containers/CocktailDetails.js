@@ -12,7 +12,7 @@ const CocktailDetails = (cocktailData) => {
     <div className="CocktailDetails">
       <img src={cocktail.strDrinkThumb} alt="drink" />
       <h3>
-        <strong>Name: </strong>
+        <strong>Cocktail name: </strong>
         { cocktail.strDrink }
       </h3>
       <p>
@@ -36,12 +36,12 @@ const CocktailDetails = (cocktailData) => {
         { cocktail.strInstructions }
       </p>
       <ul className="ingridients">
+        <p><strong>Ingridients:</strong></p>
         {Object.keys(ingridients).map((key) => (
           <li key={key}>
-            <strong>{key}</strong>
-            :
-            {' '}
-            {ingridients[key]}
+            <em>{ingridients[key]}</em>
+            {' of '}
+            {key}
           </li>
         ))}
       </ul>
