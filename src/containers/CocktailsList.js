@@ -22,7 +22,7 @@ const CocktailsList = ({ cocktails }) => {
   return (
     <div className="CocktailsList">
       <div className="CocktailsList-filter">
-        <CategoryFilter filter={handleFilterChange} cocktails={cocktails} />
+        <CategoryFilter selected={filter} filter={handleFilterChange} cocktails={cocktails} />
         <button onClick={resetFilter} type="button">Clear</button>
       </div>
       <div className="CocktailsList-list">

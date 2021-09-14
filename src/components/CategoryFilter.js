@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CategoryFilter = ({ filter, cocktails }) => {
+const CategoryFilter = ({ filter, cocktails, selected }) => {
   const options = cocktails.map((cocktail) => (
     <option value={cocktail.strDrink} key={cocktail.idDrink}>
       {cocktail.strDrink}
@@ -16,7 +16,7 @@ const CategoryFilter = ({ filter, cocktails }) => {
 
   return (
     <div className="searchWrapper d-flex  justify-content-center">
-      <select className="searchBar text-center " onChange={filter}>
+      <select value={selected} className="searchBar text-center " onChange={filter}>
         {defaultOption()}
         {options}
       </select>
@@ -27,6 +27,7 @@ const CategoryFilter = ({ filter, cocktails }) => {
 CategoryFilter.propTypes = {
   filter: PropTypes.func,
   cocktails: PropTypes.arrayOf(PropTypes.object),
+  selected: PropTypes.string.isRequired,
 };
 
 CategoryFilter.defaultProps = {
