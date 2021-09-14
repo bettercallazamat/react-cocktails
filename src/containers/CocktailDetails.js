@@ -1,14 +1,10 @@
 import React from 'react';
 import ingridientsHelper from '../helpers/ingridientsHelper';
 import '../assets/styles/CocktailDetails.css';
-// import PropTypes from 'prop-types';
 
 const CocktailDetails = (cocktailData) => {
   const { cocktail } = cocktailData;
-
   const ingridients = ingridientsHelper(cocktail);
-  // console.log(cocktail);
-  // console.log(ingridients);
 
   return (
     <div className="CocktailDetails">

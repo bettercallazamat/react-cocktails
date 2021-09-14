@@ -9,7 +9,6 @@ const Cocktail = () => {
   const cocktail = useSelector((state) => state.cocktail);
   const dispatch = useDispatch();
   const { id } = useParams();
-  // const { notFound, setNotFound } = useState(false);
 
   useEffect(() => {
     dispatch(getCocktailAction(id));
