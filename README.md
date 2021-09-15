@@ -1,6 +1,6 @@
 # REACT & REDUX COCKTAILS APP
 
-> A cocktails application built using React, Redux and [CocktailsDB](https://www.thecocktaildb.com/api.php);
+> A Catalogue of Cocktails Receipes using React, Redux and [CocktailsDB](https://www.thecocktaildb.com/api.php);
 
 ## Watch the Live Version
 
@@ -68,4 +68,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](LICENSE) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
