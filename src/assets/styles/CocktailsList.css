@@ -1,0 +1,38 @@
+.CocktailsList-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CocktailsList-filter button,
+.CocktailsList-filter select {
+  box-sizing: border-box;
+  height: 30px;
+  margin: 20px 0;
+}
+
+.CocktailsList-filter select {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.CocktailsList-filter button {
+  padding: 0 20px;
+}
+
+.CocktailsList-filter select:hover,
+.CocktailsList-filter button {
+  cursor: pointer;
+}
+
+.CocktailsList-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.CocktailsList-list a {
+  text-decoration: none;
+}

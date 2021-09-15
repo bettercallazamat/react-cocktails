@@ -1,0 +1,92 @@
+.CocktailCard {
+  width: 240px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.CocktailCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.CocktailCard h3 {
+  font-size: 18px;
+  margin: 8px 0 10px 0;
+  color: #000;
+}
+
+.CocktailCard img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.CocktailCard span {
+  display: inline-block;
+  padding: 4px;
+  margin: 0 4px 4px 0;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+
+/* FOR CONDITIONAL TAGS */
+
+/* ALCOHOLIC SECTION */
+.alcoholic {
+  background-color: #8a34d9;
+}
+
+.nonAlcoholic {
+  background-color: #65b891;
+}
+
+.optionalAlcohol {
+  background-color: #fa8334;
+}
+
+/* CATEGORY SECTION */
+.ordinaryDrink {
+  background-color: #429ea6;
+}
+
+.cocktail {
+  background-color: #e3655b;
+}
+
+.milk {
+  background-color: #d0c88e;
+}
+
+.other {
+  background-color: #80a4ed;
+}
+
+.cocoa {
+  background-color: #5f464b;
+}
+
+.shot {
+  background-color: #053225;
+}
+
+.coffeeTea {
+  background-color: #8e4a49;
+}
+
+.homemadeLiqueur {
+  background-color: #593959;
+}
+
+.punch {
+  background-color: #311847;
+}
+
+.beer {
+  background-color: #e09f7d;
+}
+
+.softDrink {
+  background-color: #ec4067;
+}

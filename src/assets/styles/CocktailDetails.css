@@ -1,0 +1,22 @@
+.CocktailDetails {
+  width: 500px;
+  margin: auto;
+}
+
+.CocktailDetails img {
+  width: 500px;
+  margin: 20px 0 20px 0;
+  padding: 0 100px 20px 100px;
+  border-bottom: 2px solid #888;
+}
+
+.CocktailDetails h3 {
+  margin: 0 0 10px 100px;
+  font-size: 24px;
+}
+
+.CocktailDetails p,
+.CocktailDetails li {
+  margin: 0 100px 8px 100px;
+  font-size: 18px;
+}
