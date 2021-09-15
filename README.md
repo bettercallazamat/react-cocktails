@@ -1,6 +1,6 @@
 # REACT & REDUX COCKTAILS APP
 
-> A Catalogue of Cocktails Receipes using React, Redux and [CocktailsDB](https://www.thecocktaildb.com/api.php);
+> A Catalogue of Cocktails Recipes using React, Redux and [CocktailsDB](https://www.thecocktaildb.com/api.php);
 
 ## Watch the Live Version
 
