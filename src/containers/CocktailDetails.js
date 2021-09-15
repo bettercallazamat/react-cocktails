@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ingridientsHelper from '../helpers/ingridientsHelper';
 import '../assets/styles/CocktailDetails.css';
 
-const CocktailDetails = (cocktailData) => {
-  const { cocktail } = cocktailData;
+const CocktailDetails = ({ cocktail }) => {
   const ingridients = ingridientsHelper(cocktail);
 
   return (
@@ -45,6 +45,10 @@ const CocktailDetails = (cocktailData) => {
       </ul>
     </div>
   );
+};
+
+CocktailDetails.propTypes = {
+  cocktail: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default CocktailDetails;
